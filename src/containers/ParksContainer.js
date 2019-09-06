@@ -13,7 +13,7 @@ class ParksContainer extends Component {
       axios.get('http://localhost:4000/api/v1/parks')
       .then((res) => {       
         const data = res.data.data
-        this.setState({data})
+        this.setState({data: data})
       })
       .catch(err => console.log(err))
     }
