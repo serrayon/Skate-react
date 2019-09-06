@@ -3,6 +3,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import NavBar from './components/Layout/NavBar';
 import Routes from './config/routes';
+import Parks from './components/Parks/Parks';
 
 import { API_URL } from './constants';
 import './App.css';
