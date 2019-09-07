@@ -20,10 +20,12 @@ const NavBar = ({ logout, currentUser }) => {
   const authLinks = (
     <>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/profile">Parks</NavLink>
+        {/* <NavLink className="nav-link" to="/profile">Parks</NavLink> */}
+        <NavLink className="nav-link" to="/parks">Parks</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/contacts">Spots</NavLink>
+        {/* <NavLink className="nav-link" to="/contacts">Spots</NavLink> */}
+        <NavLink className="nav-link" to="/spots">Spots</NavLink>
       </li>
       <li className="nav-item">
         <span className="nav-link" onClick={logout} style={{ cursor: 'pointer' }}>Logout</span>

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import NavBar from './components/Layout/NavBar';
 import Routes from './config/routes';
 import Parks from './components/Parks/Parks';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 import { API_URL } from './constants';
 import './App.css';
@@ -34,9 +35,24 @@ class App extends Component {
         <div className="container">
           <Routes setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}  />
         </div>
+        <Map google={this.props.google} zoom={14}>
+ 
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
+ 
+        <InfoWindow onClose={this.onInfoWindowClose}>
+            {/* <div>
+              <h1>{this.state.selectedPlace.name}</h1>
+            </div> */}
+        </InfoWindow>
+      </Map>
       </>
     );
   };
 };
 
-export default withRouter(App);
+// export default withRouter(App);
+
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyC0Sy6jzOrDP2eNqgMZESXzhZovY1YdlvY')
+})(App)

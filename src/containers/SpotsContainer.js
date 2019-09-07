@@ -19,7 +19,7 @@ class SpotsContainer extends Component {
       console.log(res.data.data);
       var posts = res.data.data;
       this.setState({posts});
-      console.log("======================== this.state.posts =========")
+      console.log("=========== this.state.posts =========")
       console.log(this.state.posts)
       //this.setState({isLoading: false});    
        })
