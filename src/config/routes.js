@@ -5,7 +5,7 @@ import Register from '../components/auth/Register';
 import Login from '../components/auth/Login';
 import Parks from '../components/Parks/Parks';
 import ProfileContainer from '../containers/ProfileContainer';
-import ContactsContainer from '../containers/ContactsContainer';
+import SpotsContainer from '../containers/SpotsContainer';
 import ParksContainer from '../containers/ParksContainer';
 
 const Routes = ({ setCurrentUser, history, currentUser }) => {
@@ -24,7 +24,7 @@ const Routes = ({ setCurrentUser, history, currentUser }) => {
       <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} history={history} />} />
       <Route path='/parks' component= { ParksContainer } />
       <PrivateRoute path='/profile' component={ ProfileContainer } />
-      <PrivateRoute path='/contacts' component={ ContactsContainer } />
+      <PrivateRoute path='/spots' component={ SpotsContainer } />
     </Switch>
   );
 };
