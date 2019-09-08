@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
+
 // const Home = () => {
   class Home extends Component {
     
@@ -10,6 +11,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
     render() {
   return (
     <section>
+    <a target="_blank" href="http://www.google.com">help</a>
       <h1>Home</h1>
       <Map google={this.props.google} zoom={14}>
  

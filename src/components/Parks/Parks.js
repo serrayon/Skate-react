@@ -15,7 +15,7 @@ const Parks = ({ parks }) => {
         <div className="card-body">
           <h5 className="card-title">{park.name}</h5>
           <p className="card-text">{park.description}</p>
-          <a href={park.location} className="btn btn-primary">{park.location}</a>
+          <a href={park.href} className="btn btn-primary">{park.location}</a>
         </div>
 </div>
         )
