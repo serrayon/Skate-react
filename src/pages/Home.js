@@ -6,13 +6,14 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
   class Home extends Component {
     
     state={
-
+      
     }
     render() {
   return (
     <section>
     <a target="_blank" href="http://www.google.com">help</a>
       <h1>Home</h1>
+      
       <Map google={this.props.google} zoom={14}>
  
         <Marker onClick={this.onMarkerClick}
@@ -32,5 +33,5 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 // export default Home;
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyC0Sy6jzOrDP2eNqgMZESXzhZovY1YdlvY')
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
 })(Home)
