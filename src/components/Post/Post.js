@@ -7,7 +7,7 @@ import React from 'react';
 
 
 
-    const Post = ({ posts }) => {
+    const Post = ({ posts, handleEditPost, handleDeletePost }) => {
         console.log(posts)
         const postList = posts.map(post => {
             
@@ -19,7 +19,9 @@ import React from 'react';
           return (
               <>
             <div className="card post-card">
-            { <h5 className="card-header post-title">{ post.title }</h5> }
+            <h5 className="card-header post-title">{ post.title }</h5>
+            <h5 className="card-header post-content">{ post.content}</h5>
+            
             <div className="card-body post-content">
             
             {commentList}
@@ -31,8 +33,8 @@ import React from 'react';
 
                 {/* <img src={ image } alt="" /> */}
                 {/* <p className="card-text">{ content }</p> */}
-                <button type="submit" className="post-edit-button post-update-buttons">Edit</button>
-                {/* <button type="submit" className="post-delete-button post-update-buttons" onClick={()=>{deletePost(_id)}}>Delete</button> */}
+                <button type="submit" className="post-edit-button post-update-buttons" onClick={() => handleEditPost(post)}>Edit</button>
+               <button type="submit" className="post-delete-button post-update-buttons" onClick={()=>{handleDeletePost(post._id)}}>Delete</button> 
             </div>
 
         </div>
