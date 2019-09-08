@@ -10,10 +10,25 @@ import React from 'react';
     const Post = ({ posts }) => {
         console.log(posts)
         const postList = posts.map(post => {
+            
+            
+            const commentList = post.comments.map(comment => {
+                return (<div>{comment.text}</div>)
+            })
+
           return (
+              <>
             <div className="card post-card">
             { <h5 className="card-header post-title">{ post.title }</h5> }
             <div className="card-body post-content">
+            
+            {commentList}
+            
+            
+
+
+
+
                 {/* <img src={ image } alt="" /> */}
                 {/* <p className="card-text">{ content }</p> */}
                 <button type="submit" className="post-edit-button post-update-buttons">Edit</button>
@@ -21,6 +36,7 @@ import React from 'react';
             </div>
 
         </div>
+        </>
               )
             })
 
