@@ -10,7 +10,7 @@ class SpotsContainer extends Component {
   }
     componentDidMount() {
       // console.log('bye')
-      axios.get(`${API_URL}/posts`)
+      axios.get(`${API_URL}/posts` , { withCredentials: true })
        .then((res) => { 
          console.log("========================")
          console.log(res)
