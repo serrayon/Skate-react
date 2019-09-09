@@ -23,7 +23,7 @@ class Login extends Component {
         this.props.setCurrentUser(res.data.id);
         this.props.history.push('/profile');
       })
-      .catch(err => this.setState({ error: err.response.data.message }));
+      .catch(err => this.setState({ error: err.message }));
   };
 
   render() {

@@ -13,14 +13,14 @@ class SpotsContainer extends Component {
       // console.log('bye')
       axios.get(`${API_URL}/posts` , { withCredentials: true })
        .then((res) => { 
-         console.log("========================")
+         console.log('response')
          console.log(res)
         //  const posts = res.data.data;
       // this.setState({posts});
       console.log(res.data.data);
       var posts = res.data.data;
       this.setState({posts});
-      console.log("=========== this.state.posts =========")
+      console.log('state-props')
       console.log(this.state.posts)
       //this.setState({isLoading: false});    
        })
@@ -49,7 +49,6 @@ class SpotsContainer extends Component {
       })
 
     }
-
 
     handleSubmit = () => {
       const username = localStorage.getItem("uid")
@@ -107,10 +106,6 @@ class SpotsContainer extends Component {
       })
     }
 
-
-
-
-    
   render() {
     const { mode, parksList, title, content, parks} = this.state
     return (
@@ -118,18 +113,7 @@ class SpotsContainer extends Component {
       <button onClick={this.handleMode}>
         {mode === "view"? "Create Spot": "View Spots"}
       </button>
-      {mode === "view"?<>
-      <div>
-        Spots list
-      </div>
-      <div className="post-container">
-        {/* { !isLoading ? this.state.posts.data.map(post => <Post key={post._id} id={post._id} city={post.city} content={post.content} title={post.title} />) : <h3>Loading...</h3> } */}
-        {console.log("this.state.posts " + JSON.stringify(this.state.posts))} 
-        {console.log("this.state.posts.class " + this.state.posts.class)} 
-        <Post posts={this.state.posts} handleEditPost={this.handleEditPost} handleDeletePost={this.handleDeletePost}/> 
-      </div>
-      </>: 
-      <form>
+      {mode === "create" &&<form>
       <input name="title" placeholder="enter title" value={title} onChange={this.handleChange}/>
       <input name="content" placeholder="enter content" value={content} onChange={this.handleChange}/>
       <select name="parks" onChange={this.handleChange} value={parks}>
@@ -145,6 +129,17 @@ class SpotsContainer extends Component {
       </form>
       
       }
+      <>
+      <div>
+        Spots list
+      </div>
+      <div className="post-container">
+        {/* { !isLoading ? this.state.posts.data.map(post => <Post key={post._id} id={post._id} city={post.city} content={post.content} title={post.title} />) : <h3>Loading...</h3> } */}
+        {console.log("this.state.posts " + JSON.stringify(this.state.posts))} 
+        {console.log("this.state.posts.class " + this.state.posts.class)} 
+        <Post posts={this.state.posts} handleEditPost={this.handleEditPost} handleDeletePost={this.handleDeletePost} /> 
+      </div>
+      </>
       </>
     );
   };
