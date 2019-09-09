@@ -34,6 +34,9 @@ const NavBar = ({ logout, currentUser }) => {
   );
 
   return (
+
+   
+
     <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <div className="container">
         <Link className="navbar-brand" to="/">Skate Spots</Link>

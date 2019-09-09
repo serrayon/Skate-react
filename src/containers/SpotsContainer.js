@@ -7,7 +7,8 @@ import Post from '../components/Post/Post';
 class SpotsContainer extends Component {
   state={
     posts:[],
-    mode: "view"
+    parksList: [],
+    mode: "create"
   }
     componentDidMount() {
       // console.log('bye')
@@ -25,14 +26,6 @@ class SpotsContainer extends Component {
       //this.setState({isLoading: false});    
        })
        .catch(err => console.log(err));
-
-       axios.get(`${API_URL}/parks`, { withCredentials: true })
-       .then((res) => {
-         const parksList = res.data.data;
-         this.setState({
-           parksList
-         })
-       })
     }
     handleEditPost = (post) => {
       this.setState({
@@ -50,7 +43,8 @@ class SpotsContainer extends Component {
 
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+      e.preventDefault()
       const username = localStorage.getItem("uid")
       const {parks, title, content, posts, mode,  _id } = this.state;
       const newSpot = {
@@ -64,10 +58,10 @@ class SpotsContainer extends Component {
 
       axios.post(`${API_URL}/posts`, newSpot, { withCredentials: true })
       .then((res)=> {
-        posts.push(res.data.data)
+        posts.push(res.data)
         this.setState({
           posts,
-          mode: "view"
+         
         })
 
       })
@@ -82,7 +76,6 @@ class SpotsContainer extends Component {
             }
             return post
           }),
-          mode: "view",
           _id: "",
           title: "",
           content: "",
@@ -110,25 +103,12 @@ class SpotsContainer extends Component {
     const { mode, parksList, title, content, parks} = this.state
     return (
       <>
-      <button onClick={this.handleMode}>
-        {mode === "view"? "Create Spot": "View Spots"}
-      </button>
-      {mode === "create" &&<form>
+      <form>
       <input name="title" placeholder="enter title" value={title} onChange={this.handleChange}/>
       <input name="content" placeholder="enter content" value={content} onChange={this.handleChange}/>
-      <select name="parks" onChange={this.handleChange} value={parks}>
-      <option value=""></option>
-        {
-          parksList.map((park)=> {
-            return (<option key={park._id} value={park._id}>{park.name}</option>)
-          })
-        }
-      </select>
       <button onClick={this.handleSubmit}> Submit</button>
         
       </form>
-      
-      }
       <>
       <div>
         Spots list
