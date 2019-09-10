@@ -22,7 +22,7 @@ const Routes = ({ setCurrentUser, history, currentUser }) => {
       <Route exact path='/' component={ Home } />
       <Route path='/register' component={ Register } />
       <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser} history={history} />} />
-      <Route path='/parks' component= { ParksContainer } />
+      <PrivateRoute path='/parks' component= { ParksContainer } />
       <PrivateRoute path='/profile' component={ ProfileContainer } />
       <PrivateRoute path='/spots' component={ SpotsContainer } />
     </Switch>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../constants';
+import "./login.css";
 
 class Login extends Component {
   state = {
@@ -21,13 +22,15 @@ class Login extends Component {
     axios.post(`${API_URL}/auth/login`, userInfo, { withCredentials: true })
       .then(res => {
         this.props.setCurrentUser(res.data.id);
-        this.props.history.push('/profile');
+        this.props.history.push('/parks');
       })
       .catch(err => this.setState({ error: err.message }));
   };
 
   render() {
     return (
+      <>
+      <div className="nora">
       <div className="row">
         <section id="login" className="col-md-6 offset-md-3">
         { this.state.error }
@@ -45,6 +48,8 @@ class Login extends Component {
           </form>
         </section>
       </div>
+      </div>
+      </>
     );
   };
 };

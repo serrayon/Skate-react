@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import Footer from '../components/Layout/Footer';
+import Googlemap from '../components/Googlemap/Googlemap';
+
 
 
 // const Home = () => {
@@ -11,42 +14,28 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
     render() {
   return (
     <>
-    <section>
-    <a target="_blank" href="http://www.google.com">help</a>
-      <h1>Home</h1>
-      
-      
-      <Map google={this.props.google} style={{width: '100%', height: '100%', position: 'relative'}}
-    className={'map'} zoom={14}>
- 
-        <Marker 
-          title={'The marker`s title will appear as a tooltip.'}
-    name={'SOMA'}
-    position={{lat: 37.778519, lng: -122.405640}} />
-  <Marker
-    name={'Dolores park'}
-    position={{lat: 37.759703, lng: -122.428093}} />
-  <Marker />
+    
+    <div className="row">
+      <div className="col-md-12">
+      <Googlemap />
+     
+      </div>
+      <div className="col-md-12">
+        <Footer />
+      </div>
   
       
- 
-        <InfoWindow onClose={this.onInfoWindowClose}>
-            {/* <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div> */}
-        </InfoWindow>
-      </Map>
-      
-    </section>
+    </div>
+    {/* <Googlemap /> */}
+    
+    
     </>
   );
           }
         }
 
-// export default Home;
-export default GoogleApiWrapper({
-  apiKey: `${process.env.REACT_APP_API_KEY}`,
-})(Home)
+export default Home;
+
 // style={{width: '100%', height: '100%', position: 'relative'}}
 //     className={'map'}
 //     zoom={14}>

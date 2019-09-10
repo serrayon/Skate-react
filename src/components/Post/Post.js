@@ -16,15 +16,10 @@ import React from 'react';
         <div className="card post-card">
         <h5 className="card-header post-title">{ post.title }</h5>
         <h5 className="card-header post-content">{ post.content}</h5>
-        
         <div className="card-body post-content">
         
         {commentList}
         
-        
-
-
-
 
             {/* <img src={ image } alt="" /> */}
             {/* <p className="card-text">{ content }</p> */}
@@ -44,9 +39,6 @@ import React from 'react';
             
             })
 
-
-
-
     return (
         <>
         {console.log("----------------------")}
@@ -54,9 +46,7 @@ import React from 'react';
         
         <div className="Posts">
             {postList}
-          </div>
-          
-        
+          </div>        
         </>
     )
 }

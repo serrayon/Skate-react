@@ -1,0 +1,13 @@
+.navbar {
+  background-color: blueviolet !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem !important;
+  
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+.nav-link {
+  margin: 0 20px;
+}

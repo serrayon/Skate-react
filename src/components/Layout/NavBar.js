@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import './navbar.css'
 
 const NavBar = ({ logout, currentUser }) => {
 
@@ -25,7 +26,7 @@ const NavBar = ({ logout, currentUser }) => {
       </li>
       <li className="nav-item">
         {/* <NavLink className="nav-link" to="/contacts">Spots</NavLink> */}
-        <NavLink className="nav-link" to="/spots">Spots</NavLink>
+        <NavLink className="nav-link" to="/spots">Chat</NavLink>
       </li>
       <li className="nav-item">
         <span className="nav-link" onClick={logout} style={{ cursor: 'pointer' }}>Logout</span>
@@ -37,9 +38,9 @@ const NavBar = ({ logout, currentUser }) => {
 
    
 
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4 customnav">
       <div className="container">
-        <Link className="navbar-brand" to="/">Skate Spots</Link>
+        <Link className="navbar-brand" to="/">Skate SF</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
