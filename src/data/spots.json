@@ -1,0 +1,46 @@
+[
+  {
+  "name": "Balboa Park",
+  "image": "http://a.espncdn.com/photo/2012/1013/as_skate_Balboa_576.jpg",
+  "description": "Outdoor",
+  "location": "Ocean Avenue &, San Jose Avenue, San Francisco, CA 94112",
+  "href": "https://www.google.com/maps/place/Balboa+Skatepark/@37.7231869,-122.4450726,15z/data=!4m2!3m1!1s0x0:0xf93786674031524e?sa=X&ved=2ahUKEwihwMiE-r_kAhUSrlkKHbN5Dj0Q_BIwG3oECA0QCA",
+  "geometry": {
+    "type": "point",
+    "coordinates": [37.7702491,-122.4218772]
+  }
+  },
+  {
+    "name": "Balboa Park",
+    "image": "http://a.espncdn.com/photo/2012/1013/as_skate_Balboa_576.jpg",
+    "description": "Outdoor",
+    "location": "Ocean Avenue &, San Jose Avenue, San Francisco, CA 94112",
+    "href": "https://www.google.com/maps/place/Balboa+Skatepark/@37.7231869,-122.4450726,15z/data=!4m2!3m1!1s0x0:0xf93786674031524e?sa=X&ved=2ahUKEwihwMiE-r_kAhUSrlkKHbN5Dj0Q_BIwG3oECA0QCA",
+    "geometry": {
+      "type": "point",
+      "coordinates": [37.7479,-122.3902]   
+    }
+    },
+    {
+      "name": "Balboa Park",
+      "image": "http://a.espncdn.com/photo/2012/1013/as_skate_Balboa_576.jpg",
+      "description": "Outdoor",
+      "location": "Ocean Avenue &, San Jose Avenue, San Francisco, CA 94112",
+      "href": "https://www.google.com/maps/place/Balboa+Skatepark/@37.7231869,-122.4450726,15z/data=!4m2!3m1!1s0x0:0xf93786674031524e?sa=X&ved=2ahUKEwihwMiE-r_kAhUSrlkKHbN5Dj0Q_BIwG3oECA0QCA",
+      "geometry": {
+        "type": "point",
+        "coordinates": [37.7821,-122.5078]    
+      }
+      },
+      {
+        "name": "Balboa Park",
+        "image": "http://a.espncdn.com/photo/2012/1013/as_skate_Balboa_576.jpg",
+        "description": "Outdoor",
+        "location": "Ocean Avenue &, San Jose Avenue, San Francisco, CA 94112",
+        "href": "https://www.google.com/maps/place/Balboa+Skatepark/@37.7231869,-122.4450726,15z/data=!4m2!3m1!1s0x0:0xf93786674031524e?sa=X&ved=2ahUKEwihwMiE-r_kAhUSrlkKHbN5Dj0Q_BIwG3oECA0QCA",
+        "geometry": {
+          "type": "point",
+          "coordinates": [37.752551,-122.41832099999999] 
+        }
+        }
+]

@@ -1,13 +1,16 @@
 .navbar {
-  background-color: blueviolet !important;
+  background-color: rgb(180, 123, 233) !important;
   font-family: 'Times New Roman', Times, serif;
   font-size: 2rem !important;
+  color: white;
   
 }
 
 .navbar-brand {
   font-size: 2rem;
+  color: red;
 }
 .nav-link {
   margin: 0 20px;
+  color: red;
 }

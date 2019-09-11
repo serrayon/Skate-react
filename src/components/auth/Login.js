@@ -30,25 +30,26 @@ class Login extends Component {
   render() {
     return (
       <>
-      <div className="nora">
-      <div className="row">
-        <section id="login" className="col-md-6 offset-md-3">
+      
+      <div className="row nora">
+        <div id="login" className="col-md-6 p-5 mt-5">
         { this.state.error }
           <h1>Login</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input className="form-control form-control-lg" type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="example@example.com" />
+              <input className="form-control form-control-lg" type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="goskate@gmail.com" />
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input className="form-control form-control-lg" type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} />
+              <input className="form-control form-control-lg " type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} />
             </div>
-            <button type="submit" className="btn btn-primary float-right">Login</button>
+            <button type="submit" className="btn btn-primary">Login</button>
           </form>
-        </section>
+        </div>
+        <div className="col-md-6"></div>
       </div>
-      </div>
+     
       </>
     );
   };

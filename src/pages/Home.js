@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Footer from '../components/Layout/Footer';
 import Googlemap from '../components/Googlemap/Googlemap';
+import './home.css';
 
 
 
@@ -16,12 +17,12 @@ import Googlemap from '../components/Googlemap/Googlemap';
     <>
     
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-12" className="info">
       <Googlemap />
      
       </div>
       <div className="col-md-12">
-        <Footer />
+        {/* <Footer /> */}
       </div>
   
       

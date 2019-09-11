@@ -4,8 +4,8 @@ import { withRouter } from 'react-router-dom';
 import NavBar from './components/Layout/NavBar';
 import Routes from './config/routes';
 import Parks from './components/Parks/Parks';
-// import Footer from './components/Layout/Footer';
-// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+
+
 
 import { API_URL } from './constants';
 import './App.css';
@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <>
       <NavBar logout={this.handleLogout} currentUser={this.state.currentUser} />
-        <div className="container">
+        <div className="container-fluid purple">
           <Routes setCurrentUser={this.setCurrentUser} currentUser={this.state.currentUser}/>
           
         </div>

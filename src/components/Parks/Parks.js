@@ -4,12 +4,6 @@ import React from 'react';
 const Parks = ({ parks }) => {
   const parksList = parks.map(park => {
     return (
-      //  <div className="parkCard">
-      //      <h1>{park.name}</h1>
-      //      <h3>{park.description}</h3>
-      //      <h3>{park.location}</h3>
-      //      <img src={park.image} alt='skateparks' />
-      //    </div> 
       <div className="card" >
       <img src={park.image} className="card-img-top" alt="saktepark"/>
         <div className="card-body">

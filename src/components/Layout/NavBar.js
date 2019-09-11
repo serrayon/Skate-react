@@ -38,7 +38,7 @@ const NavBar = ({ logout, currentUser }) => {
 
    
 
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4 customnav">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark customnav">
       <div className="container">
         <Link className="navbar-brand" to="/">Skate SF</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
